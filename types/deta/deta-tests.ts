@@ -13,7 +13,9 @@ async function test() {
 
     await db.insert({ foo: 12345 }, 'requiredKey');
     await db.get('key');
-
+    
+    const { value: simpleFetch } = await db.fetch({ key: 'value' }).next();
+    
     const items = await db.fetch({
         key: 'value',
         otherKey: { nestedKey: 12345 }
