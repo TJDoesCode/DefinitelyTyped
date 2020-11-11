@@ -1,6 +1,6 @@
 // Type definitions for deta 0.0
 // Project: https://github.com/deta/deta-javascript
-// Definitions by: Felix Mattick <https://github.com/kognise>
+// Definitions by: Felix Mattick <https://github.com/kognise> and Trevor R <https://github.com/TJDoesCode>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 export type Serializable = { [key: string]: any } | string | number | boolean | ReadonlyArray<any>;
