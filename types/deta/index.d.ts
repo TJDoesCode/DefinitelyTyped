@@ -30,7 +30,7 @@ export interface DetaBase {
     insert<Data = Serializable>(data: Data, key: string): Promise<Data>;
     get(key: string): Promise<Serializable | null>;
     delete(key: string): Promise<void>;
-    fetch(query?: DetaBaseQuery, limit?: number, buffer?: number): Promise<AsyncIterable<ReadonlyArray<Serializable>>>;
+    fetch(query?: DetaBaseQuery, limit?: number, buffer?: number): Generator<Promise<AsyncIterable<ReadonlyArray<Serializable>>>>;
     update(updates: DetaBaseUpdates, key: string): Promise<void>;
 
     util: DetaBaseUtil;
